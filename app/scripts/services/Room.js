@@ -1,10 +1,16 @@
 (function() {
-	function Room($firebaseArray) {
+	function Room($firebaseArray, $uibModal) {
 		var ref = firebase.database().ref().child('rooms');
 		var rooms = $firebaseArray(ref);
 
+		var createChatRoom = function(room) {
+			rooms.$add(room);
+		};
+
+		
 		return {
-			all: rooms
+			all: rooms,
+			createChatRoom: createChatRoom
 		};
 	}
 
