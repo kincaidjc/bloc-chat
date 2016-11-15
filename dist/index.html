@@ -21,28 +21,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
 	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
-    
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
 	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
 
 	<!--UI Bootstrap-->
 	<script src="../scripts/ui-bootstrap-tpls-2.1.3.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+    
     <script>
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyC-90kjhCmQL5BDl0HLyJAM9nYmoZ-wNT0",
         authDomain: "bloc-chat-a21f1.firebaseapp.com",
         databaseURL: "https://bloc-chat-a21f1.firebaseio.com",
-        storageBucket: "bloc-chat-a21f1.appspot.com",
+         storageBucket: "bloc-chat-a21f1.appspot.com",
         messagingSenderId: "885074479612"
       };
       firebase.initializeApp(config);
@@ -53,6 +49,7 @@
     <script src="../scripts/controllers/ChatroomCtrl.js"></script>
     <script src="../scripts/controllers/ModalCtrl.js"></script>
     <script src="../scripts/services/Room.js"></script>
+    <script src="../scripts/directives/newChat.js"></script>
 
 </body>
 </html>
