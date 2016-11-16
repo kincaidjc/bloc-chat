@@ -1,10 +1,7 @@
 (function() {
-	function ChatroomCtrl(Room, $uibModal) {
+	function ChatroomCtrl(Room, Message, $uibModal, $cookies) {
 		var $ctrl = this;
-		window.foo = Room.all;
 		this.rooms = Room.all;
-
-
 
 		this.open = function () {
 		  	console.log("open() was called")
@@ -20,14 +17,20 @@
 		this.newChat = function(room) {
 			$ctrl.activeRoom = room;
 			$ctrl.messages = Room.getMessages(room.$id);
-			console.log($ctrl.messages)
-
-
 		};
+
+		this.sendMessage = function(room){
+					Message.send({
+						content: $ctrl.newMessage.content,
+						sentAt: Date.now(),
+						username: $cookies.get('blocChatCurrentUser'),
+						roomId: $ctrl.activeRoom.$id
+					})
+				};
 
 	}
 
 	angular
 		.module('blocChat')
-		.controller('ChatroomCtrl', ['Room','$uibModal',  ChatroomCtrl]);
+		.controller('ChatroomCtrl', ['Room', 'Message', '$uibModal', '$cookies',  ChatroomCtrl]);
 })();

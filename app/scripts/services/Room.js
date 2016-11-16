@@ -11,17 +11,26 @@
 			rooms.$add(room);
 		};
 
+		var createUsername = function(username) {
+			users.$add(username);
+		};
+
 		//Get messages from current room based on roomId
 
 		var getMessages = function(roomId){
 			var currentRoomMessages = messageRef.orderByChild("roomId").equalTo(roomId);
 			return $firebaseArray(currentRoomMessages);
 		};
+
+		var getRoomId = function(roomId){
+			return roomId;
+		};
 		
 		return {
 			all: rooms,
 			createChatRoom: createChatRoom,
-			getMessages: getMessages
+			getMessages: getMessages,
+			getRoomId: getRoomId
 		};
 	}
 
