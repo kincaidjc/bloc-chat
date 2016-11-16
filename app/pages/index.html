@@ -17,6 +17,9 @@
 	<!-- Angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 
+	<!-- Angular Cookies -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+
 	<!-- UI Router -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
@@ -38,7 +41,7 @@
         apiKey: "AIzaSyC-90kjhCmQL5BDl0HLyJAM9nYmoZ-wNT0",
         authDomain: "bloc-chat-a21f1.firebaseapp.com",
         databaseURL: "https://bloc-chat-a21f1.firebaseio.com",
-         storageBucket: "bloc-chat-a21f1.appspot.com",
+        storageBucket: "bloc-chat-a21f1.appspot.com",
         messagingSenderId: "885074479612"
       };
       firebase.initializeApp(config);
@@ -48,7 +51,9 @@
     <script src="../scripts/app.js"></script>
     <script src="../scripts/controllers/ChatroomCtrl.js"></script>
     <script src="../scripts/controllers/ModalCtrl.js"></script>
+    <script src="../scripts/controllers/UserCtrl.js"></script>
     <script src="../scripts/services/Room.js"></script>
+    <script src="../scripts/services/BlocChatCookies.js"></script>
     <script src="../scripts/directives/newChat.js"></script>
 
 </body>

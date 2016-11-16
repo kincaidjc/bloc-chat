@@ -20,6 +20,9 @@
 		this.newChat = function(room) {
 			$ctrl.activeRoom = room;
 			$ctrl.messages = Room.getMessages(room.$id);
+			console.log($ctrl.messages)
+
+
 		};
 
 	}
